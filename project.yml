@@ -1,0 +1,113 @@
+name: IslandTime
+options:
+  bundleIdPrefix: com.alecrj
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  IslandTime:
+    type: application
+    platform: iOS
+    sources:
+      - path: ScreenTimeTimer
+        excludes:
+          - "**/.DS_Store"
+      - path: Shared/AppGroupStorage.swift
+      - path: Shared/LiveActivityManager.swift
+      - path: Shared/TimerActivityAttributes.swift
+      - path: Shared/TimerCustomization.swift
+      - path: Shared/WidgetCenter+Extensions.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime
+        INFOPLIST_FILE: ScreenTimeTimer/Info.plist
+        CODE_SIGN_ENTITLEMENTS: ScreenTimeTimer/ScreenTimeTimer.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    entitlements:
+      path: ScreenTimeTimer/ScreenTimeTimer.entitlements
+      properties:
+        com.apple.developer.family-controls: true
+        com.apple.security.application-groups:
+          - group.com.alecrj.islandtime
+
+  DeviceActivityMonitorExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: DeviceActivityMonitorExtension
+        excludes:
+          - "**/.DS_Store"
+      - path: Shared/AppGroupStorage.swift
+      - path: Shared/LiveActivityManager.swift
+      - path: Shared/TimerActivityAttributes.swift
+      - path: Shared/TimerCustomization.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.DeviceActivityMonitorExtension
+        INFOPLIST_FILE: DeviceActivityMonitorExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements
+        SKIP_INSTALL: YES
+    entitlements:
+      path: DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements
+      properties:
+        com.apple.developer.family-controls: true
+        com.apple.security.application-groups:
+          - group.com.alecrj.islandtime
+    dependencies:
+      - target: IslandTime
+        embed: false
+
+  TimerActivityExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: TimerActivityExtension
+        excludes:
+          - "**/.DS_Store"
+      - path: Shared/TimerActivityAttributes.swift
+      - path: Shared/TimerCustomization.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.TimerActivityExtension
+        INFOPLIST_FILE: TimerActivityExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: TimerActivityExtension/TimerActivityExtension.entitlements
+        SKIP_INSTALL: YES
+    entitlements:
+      path: TimerActivityExtension/TimerActivityExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.alecrj.islandtime
+    dependencies:
+      - target: IslandTime
+        embed: false
+
+  ScreenTimeWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: ScreenTimeWidget
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.ScreenTimeWidget
+        INFOPLIST_FILE: ScreenTimeWidget/Info.plist
+        CODE_SIGN_ENTITLEMENTS: ScreenTimeWidget/ScreenTimeWidget.entitlements
+        SKIP_INSTALL: YES
+    entitlements:
+      path: ScreenTimeWidget/ScreenTimeWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.alecrj.islandtime
+    dependencies:
+      - target: IslandTime
+        embed: false

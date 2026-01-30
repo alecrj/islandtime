@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007BCBA7120FC3C2265CD109 /* TimerActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */; };
+		096AE252AB19DBCF238DE1B3 /* TimerActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B195E7DC5DF84A5A446830DD /* TimerActivityLiveActivity.swift */; };
+		13677CB0026A1374A9566B32 /* DebugHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76A02DC8142C46F9BF98EE /* DebugHelpers.swift */; };
+		1D43A0526B9D76F982420A3D /* TimerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49A4F1401135D22C415E5C /* TimerCustomization.swift */; };
+		31E1C872FCB4DC9523DD4B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81556818BCC34694E9E2C841 /* Assets.xcassets */; };
+		359647D563021A732B93288F /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589067461EC07C8B8DFE475 /* AppGroupStorage.swift */; };
+		3D2332632355E15C32EDFFC0 /* TimerActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A973C91A0A3EFCC55B9E5A1 /* TimerActivityBundle.swift */; };
+		4B4AA3BA2AB54F3D99ECC97A /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589067461EC07C8B8DFE475 /* AppGroupStorage.swift */; };
+		4ED9DC1255C72DD88A79394B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAC83B6BAA51905218FF609 /* AppState.swift */; };
+		522E847F823B5D8FDF7FA328 /* ScreenTimeTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05711C8D6617FD33178FC7AD /* ScreenTimeTimerApp.swift */; };
+		5A065A9EA4E9376054824BB4 /* TimerActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */; };
+		5A3DE8FCB05D6DB7D7DB6CD9 /* OnboardingPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26B5A5596D2C05D0DBE58 /* OnboardingPreviewView.swift */; };
+		62011CC32FCE05458E59D813 /* MainSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C94B731401F4FB3C8E823D /* MainSettingsView.swift */; };
+		6B1573F07BC5A7B286D2C96D /* ScreenTimeWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25D2CB94C3112F3C73E644 /* ScreenTimeWidgetBundle.swift */; };
+		6EFAB2640983A41022FE7ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586437CEDB3F49EE1B3EE327 /* Assets.xcassets */; };
+		7B3F0A5CEFCAA1BAD5ABCD29 /* CustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E46CEA39BEE0D3E6E1C41 /* CustomizationView.swift */; };
+		88900B1175FBED2399236E62 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A668B3CEC15A17355454CD /* LiveActivityManager.swift */; };
+		93FD092E866371C856F3F8C9 /* TimerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49A4F1401135D22C415E5C /* TimerCustomization.swift */; };
+		A1C4271723473F16D58E5C0C /* ScreenTimeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939F699C11773EBFD779E08 /* ScreenTimeWidget.swift */; };
+		A2004D677198465E2845088D /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A14D9921C0C6F8828CE7F /* OnboardingContainerView.swift */; };
+		A8B98811CCEF0A7E91A57D9A /* WidgetStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A077F4E0A15272855260B /* WidgetStorage.swift */; };
+		B9C6AE7E30E4BD8C232916C0 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876E1F5D19E438495CCB20A /* DeviceActivityMonitorExtension.swift */; };
+		BB2C8A86CE7DFFED4CB008BE /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A668B3CEC15A17355454CD /* LiveActivityManager.swift */; };
+		C3D9ED11E24C1EF182C775D8 /* OnboardingAppPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C19558633630BBF3C33066 /* OnboardingAppPickerView.swift */; };
+		C779D5D47BBF6D72E1275CEB /* TimerActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */; };
+		CB50E8A50FCF52E4616D5A26 /* OnboardingPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AD917C7B1D8EE5DE9DF048 /* OnboardingPermissionView.swift */; };
+		D53C22865D2F28DCCD1AB253 /* WidgetCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153FB915C1AD53901F5DDCF /* WidgetCenter+Extensions.swift */; };
+		E262CA99EC54F28D260C5AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F101BEEBA00FB0A70420010 /* Assets.xcassets */; };
+		F46A8F157FE177896026DF52 /* TimerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49A4F1401135D22C415E5C /* TimerCustomization.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F2C31165DA5328299C67BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CBE54DCCE168F4FB15A10D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B99AF9171B57DE8E1654F7;
+			remoteInfo = IslandTime;
+		};
+		4EA3FF1590F6588BC61C0219 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CBE54DCCE168F4FB15A10D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B99AF9171B57DE8E1654F7;
+			remoteInfo = IslandTime;
+		};
+		C04E44E60D25FC938D875948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CBE54DCCE168F4FB15A10D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B99AF9171B57DE8E1654F7;
+			remoteInfo = IslandTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05711C8D6617FD33178FC7AD /* ScreenTimeTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeTimerApp.swift; sourceTree = "<group>"; };
+		0A973C91A0A3EFCC55B9E5A1 /* TimerActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActivityBundle.swift; sourceTree = "<group>"; };
+		1153FB915C1AD53901F5DDCF /* WidgetCenter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetCenter+Extensions.swift"; sourceTree = "<group>"; };
+		1F101BEEBA00FB0A70420010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28A668B3CEC15A17355454CD /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
+		2939F699C11773EBFD779E08 /* ScreenTimeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeWidget.swift; sourceTree = "<group>"; };
+		312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = TimerActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		54848E6C3731FF6AB337FA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		586437CEDB3F49EE1B3EE327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CAC83B6BAA51905218FF609 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6876E1F5D19E438495CCB20A /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ScreenTimeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AD917C7B1D8EE5DE9DF048 /* OnboardingPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPermissionView.swift; sourceTree = "<group>"; };
+		7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActivityAttributes.swift; sourceTree = "<group>"; };
+		81556818BCC34694E9E2C841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		849E46CEA39BEE0D3E6E1C41 /* CustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
+		8CBF7652A1FF5EFB2BCECB1A /* DeviceActivityMonitorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitorExtension.entitlements; sourceTree = "<group>"; };
+		918A14D9921C0C6F8828CE7F /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		9F41154B955634B1F7E4041F /* TimerActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimerActivityExtension.entitlements; sourceTree = "<group>"; };
+		9FD74411B7C0EF3F98441037 /* ScreenTimeTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeTimer.entitlements; sourceTree = "<group>"; };
+		A26A077F4E0A15272855260B /* WidgetStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetStorage.swift; sourceTree = "<group>"; };
+		AD25D2CB94C3112F3C73E644 /* ScreenTimeWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeWidgetBundle.swift; sourceTree = "<group>"; };
+		B195E7DC5DF84A5A446830DD /* TimerActivityLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActivityLiveActivity.swift; sourceTree = "<group>"; };
+		B589067461EC07C8B8DFE475 /* AppGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupStorage.swift; sourceTree = "<group>"; };
+		B827D7F4BBFCFDD6795FCFD4 /* ScreenTimeWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeWidget.entitlements; sourceTree = "<group>"; };
+		C6C19558633630BBF3C33066 /* OnboardingAppPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAppPickerView.swift; sourceTree = "<group>"; };
+		C9C94B731401F4FB3C8E823D /* MainSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsView.swift; sourceTree = "<group>"; };
+		DA34567646B5C0647956477D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB76A02DC8142C46F9BF98EE /* DebugHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugHelpers.swift; sourceTree = "<group>"; };
+		DFC26B5A5596D2C05D0DBE58 /* OnboardingPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPreviewView.swift; sourceTree = "<group>"; };
+		F131747A9F6BF0F446C46A40 /* IslandTime.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = IslandTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EEF2A34D71C7158AC87565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC49A4F1401135D22C415E5C /* TimerCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCustomization.swift; sourceTree = "<group>"; };
+		FD52D80011BB497B0C2CBAE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0E0E4E11891866B255AE7DC8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C6C19558633630BBF3C33066 /* OnboardingAppPickerView.swift */,
+				918A14D9921C0C6F8828CE7F /* OnboardingContainerView.swift */,
+				77AD917C7B1D8EE5DE9DF048 /* OnboardingPermissionView.swift */,
+				DFC26B5A5596D2C05D0DBE58 /* OnboardingPreviewView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4F7F45E155A5813DEA053234 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8CBF7652A1FF5EFB2BCECB1A /* DeviceActivityMonitorExtension.entitlements */,
+				6876E1F5D19E438495CCB20A /* DeviceActivityMonitorExtension.swift */,
+				F3EEF2A34D71C7158AC87565 /* Info.plist */,
+			);
+			path = DeviceActivityMonitorExtension;
+			sourceTree = "<group>";
+		};
+		7864C893335F644054CFA526 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */,
+				F131747A9F6BF0F446C46A40 /* IslandTime.app */,
+				6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */,
+				312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AA2E80BFB372933F8940A72 /* ScreenTimeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				586437CEDB3F49EE1B3EE327 /* Assets.xcassets */,
+				54848E6C3731FF6AB337FA63 /* Info.plist */,
+				B827D7F4BBFCFDD6795FCFD4 /* ScreenTimeWidget.entitlements */,
+				2939F699C11773EBFD779E08 /* ScreenTimeWidget.swift */,
+				AD25D2CB94C3112F3C73E644 /* ScreenTimeWidgetBundle.swift */,
+				A26A077F4E0A15272855260B /* WidgetStorage.swift */,
+			);
+			path = ScreenTimeWidget;
+			sourceTree = "<group>";
+		};
+		9C139F33DB711E5F10B429BE /* ScreenTimeTimer */ = {
+			isa = PBXGroup;
+			children = (
+				5CAC83B6BAA51905218FF609 /* AppState.swift */,
+				1F101BEEBA00FB0A70420010 /* Assets.xcassets */,
+				FD52D80011BB497B0C2CBAE0 /* Info.plist */,
+				9FD74411B7C0EF3F98441037 /* ScreenTimeTimer.entitlements */,
+				05711C8D6617FD33178FC7AD /* ScreenTimeTimerApp.swift */,
+				C6050608CD0A965BFF9645D9 /* Utilities */,
+				AE46135A86CBE75E9C818CC4 /* Views */,
+			);
+			path = ScreenTimeTimer;
+			sourceTree = "<group>";
+		};
+		AE46135A86CBE75E9C818CC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				849E46CEA39BEE0D3E6E1C41 /* CustomizationView.swift */,
+				C9C94B731401F4FB3C8E823D /* MainSettingsView.swift */,
+				0E0E4E11891866B255AE7DC8 /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6050608CD0A965BFF9645D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DB76A02DC8142C46F9BF98EE /* DebugHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CE4D7AD5BD5BFEB2F7C7D44B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B589067461EC07C8B8DFE475 /* AppGroupStorage.swift */,
+				28A668B3CEC15A17355454CD /* LiveActivityManager.swift */,
+				7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */,
+				FC49A4F1401135D22C415E5C /* TimerCustomization.swift */,
+				1153FB915C1AD53901F5DDCF /* WidgetCenter+Extensions.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FCFBD9CCA45F10FD92133194 /* TimerActivityExtension */ = {
+			isa = PBXGroup;
+			children = (
+				81556818BCC34694E9E2C841 /* Assets.xcassets */,
+				DA34567646B5C0647956477D /* Info.plist */,
+				0A973C91A0A3EFCC55B9E5A1 /* TimerActivityBundle.swift */,
+				9F41154B955634B1F7E4041F /* TimerActivityExtension.entitlements */,
+				B195E7DC5DF84A5A446830DD /* TimerActivityLiveActivity.swift */,
+			);
+			path = TimerActivityExtension;
+			sourceTree = "<group>";
+		};
+		FF8F7957630FB1CA630A56EA = {
+			isa = PBXGroup;
+			children = (
+				4F7F45E155A5813DEA053234 /* DeviceActivityMonitorExtension */,
+				9C139F33DB711E5F10B429BE /* ScreenTimeTimer */,
+				9AA2E80BFB372933F8940A72 /* ScreenTimeWidget */,
+				CE4D7AD5BD5BFEB2F7C7D44B /* Shared */,
+				FCFBD9CCA45F10FD92133194 /* TimerActivityExtension */,
+				7864C893335F644054CFA526 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B113261CD16B90C3956E1B03 /* ScreenTimeWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78D75DE9F68127087C370F9 /* Build configuration list for PBXNativeTarget "ScreenTimeWidget" */;
+			buildPhases = (
+				A770B891DA0D7A30ABDD89E8 /* Sources */,
+				97E7D8EEA0DE75CDE452619D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA23E86BD091AFC1DB85CC5E /* PBXTargetDependency */,
+			);
+			name = ScreenTimeWidget;
+			packageProductDependencies = (
+			);
+			productName = ScreenTimeWidget;
+			productReference = 6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B20DA7217AC82FDBCB5CC368 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B230065442810DF301C989 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */;
+			buildPhases = (
+				C9B9783C75A00A7377237E84 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FC6AA6D3170B934E3887DF7 /* PBXTargetDependency */,
+			);
+			name = DeviceActivityMonitorExtension;
+			packageProductDependencies = (
+			);
+			productName = DeviceActivityMonitorExtension;
+			productReference = 821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B2B99AF9171B57DE8E1654F7 /* IslandTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12633FD4E0DC5860D4534A95 /* Build configuration list for PBXNativeTarget "IslandTime" */;
+			buildPhases = (
+				2676ABF88A51C42CEA553B6D /* Sources */,
+				0CCF2B4441B1542C552A654B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IslandTime;
+			packageProductDependencies = (
+			);
+			productName = IslandTime;
+			productReference = F131747A9F6BF0F446C46A40 /* IslandTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FBB0638DF168C6F9D325029C /* TimerActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F85AEF0E54ACB2EE301991B /* Build configuration list for PBXNativeTarget "TimerActivityExtension" */;
+			buildPhases = (
+				7B19A10ED2BDAA4CAD2DEC8E /* Sources */,
+				8C0464757752326F8F70A8A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7BB5DFD89E204392FCCDE64 /* PBXTargetDependency */,
+			);
+			name = TimerActivityExtension;
+			packageProductDependencies = (
+			);
+			productName = TimerActivityExtension;
+			productReference = 312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CBE54DCCE168F4FB15A10D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = EDD719621188C2C0BB793924 /* Build configuration list for PBXProject "IslandTime" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FF8F7957630FB1CA630A56EA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B20DA7217AC82FDBCB5CC368 /* DeviceActivityMonitorExtension */,
+				B2B99AF9171B57DE8E1654F7 /* IslandTime */,
+				B113261CD16B90C3956E1B03 /* ScreenTimeWidget */,
+				FBB0638DF168C6F9D325029C /* TimerActivityExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CCF2B4441B1542C552A654B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E262CA99EC54F28D260C5AC3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C0464757752326F8F70A8A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31E1C872FCB4DC9523DD4B1A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97E7D8EEA0DE75CDE452619D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EFAB2640983A41022FE7ED0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2676ABF88A51C42CEA553B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359647D563021A732B93288F /* AppGroupStorage.swift in Sources */,
+				4ED9DC1255C72DD88A79394B /* AppState.swift in Sources */,
+				7B3F0A5CEFCAA1BAD5ABCD29 /* CustomizationView.swift in Sources */,
+				13677CB0026A1374A9566B32 /* DebugHelpers.swift in Sources */,
+				BB2C8A86CE7DFFED4CB008BE /* LiveActivityManager.swift in Sources */,
+				62011CC32FCE05458E59D813 /* MainSettingsView.swift in Sources */,
+				C3D9ED11E24C1EF182C775D8 /* OnboardingAppPickerView.swift in Sources */,
+				A2004D677198465E2845088D /* OnboardingContainerView.swift in Sources */,
+				CB50E8A50FCF52E4616D5A26 /* OnboardingPermissionView.swift in Sources */,
+				5A3DE8FCB05D6DB7D7DB6CD9 /* OnboardingPreviewView.swift in Sources */,
+				522E847F823B5D8FDF7FA328 /* ScreenTimeTimerApp.swift in Sources */,
+				007BCBA7120FC3C2265CD109 /* TimerActivityAttributes.swift in Sources */,
+				93FD092E866371C856F3F8C9 /* TimerCustomization.swift in Sources */,
+				D53C22865D2F28DCCD1AB253 /* WidgetCenter+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B19A10ED2BDAA4CAD2DEC8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A065A9EA4E9376054824BB4 /* TimerActivityAttributes.swift in Sources */,
+				3D2332632355E15C32EDFFC0 /* TimerActivityBundle.swift in Sources */,
+				096AE252AB19DBCF238DE1B3 /* TimerActivityLiveActivity.swift in Sources */,
+				F46A8F157FE177896026DF52 /* TimerCustomization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A770B891DA0D7A30ABDD89E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C4271723473F16D58E5C0C /* ScreenTimeWidget.swift in Sources */,
+				6B1573F07BC5A7B286D2C96D /* ScreenTimeWidgetBundle.swift in Sources */,
+				A8B98811CCEF0A7E91A57D9A /* WidgetStorage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B9783C75A00A7377237E84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B4AA3BA2AB54F3D99ECC97A /* AppGroupStorage.swift in Sources */,
+				B9C6AE7E30E4BD8C232916C0 /* DeviceActivityMonitorExtension.swift in Sources */,
+				88900B1175FBED2399236E62 /* LiveActivityManager.swift in Sources */,
+				C779D5D47BBF6D72E1275CEB /* TimerActivityAttributes.swift in Sources */,
+				1D43A0526B9D76F982420A3D /* TimerCustomization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FC6AA6D3170B934E3887DF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2B99AF9171B57DE8E1654F7 /* IslandTime */;
+			targetProxy = 1F2C31165DA5328299C67BE2 /* PBXContainerItemProxy */;
+		};
+		C7BB5DFD89E204392FCCDE64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2B99AF9171B57DE8E1654F7 /* IslandTime */;
+			targetProxy = 4EA3FF1590F6588BC61C0219 /* PBXContainerItemProxy */;
+		};
+		CA23E86BD091AFC1DB85CC5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2B99AF9171B57DE8E1654F7 /* IslandTime */;
+			targetProxy = C04E44E60D25FC938D875948 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00F71F3797BD61BD8A9CE25E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		0461FCDD1A5A728B15590286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TimerActivityExtension/TimerActivityExtension.entitlements;
+				INFOPLIST_FILE = TimerActivityExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.TimerActivityExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0F1C01F94742B9DEA7CED2FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeTimer/ScreenTimeTimer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ScreenTimeTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1668F7FAA6EAF04DA34AAD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		3797E36BFAF3D5CC14935F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeWidget/ScreenTimeWidget.entitlements;
+				INFOPLIST_FILE = ScreenTimeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.ScreenTimeWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41A5EDFF45AE39999FA9DB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TimerActivityExtension/TimerActivityExtension.entitlements;
+				INFOPLIST_FILE = TimerActivityExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.TimerActivityExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48DEACF41807CF8F0C28880E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeTimer/ScreenTimeTimer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ScreenTimeTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81CC53233E0B58E2EB6DF3D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeWidget/ScreenTimeWidget.entitlements;
+				INFOPLIST_FILE = ScreenTimeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.ScreenTimeWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9DA09B1C8A168599AEC28AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.DeviceActivityMonitorExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC6E0E34E1B7C2569853D0AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.DeviceActivityMonitorExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12633FD4E0DC5860D4534A95 /* Build configuration list for PBXNativeTarget "IslandTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48DEACF41807CF8F0C28880E /* Debug */,
+				0F1C01F94742B9DEA7CED2FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8F85AEF0E54ACB2EE301991B /* Build configuration list for PBXNativeTarget "TimerActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41A5EDFF45AE39999FA9DB55 /* Debug */,
+				0461FCDD1A5A728B15590286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A78D75DE9F68127087C370F9 /* Build configuration list for PBXNativeTarget "ScreenTimeWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3797E36BFAF3D5CC14935F5E /* Debug */,
+				81CC53233E0B58E2EB6DF3D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A7B230065442810DF301C989 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6E0E34E1B7C2569853D0AE /* Debug */,
+				D9DA09B1C8A168599AEC28AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EDD719621188C2C0BB793924 /* Build configuration list for PBXProject "IslandTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F71F3797BD61BD8A9CE25E /* Debug */,
+				1668F7FAA6EAF04DA34AAD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CBE54DCCE168F4FB15A10D5 /* Project object */;
+}

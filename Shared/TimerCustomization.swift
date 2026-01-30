@@ -123,19 +123,3 @@ extension AppGroupStorage {
     }
 }
 
-// MARK: - Widget Storage Extension (for read-only access)
-extension WidgetStorage {
-    private static let customizationKey = "timerCustomization"
-
-    func loadCustomization() -> TimerCustomization {
-        guard let defaults = UserDefaults(suiteName: "group.com.alecrj.islandtime"),
-              let data = defaults.data(forKey: Self.customizationKey) else {
-            return .default
-        }
-        do {
-            return try JSONDecoder().decode(TimerCustomization.self, from: data)
-        } catch {
-            return .default
-        }
-    }
-}
