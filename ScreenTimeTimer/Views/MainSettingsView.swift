@@ -122,6 +122,42 @@ struct MainSettingsView: View {
                     }
                     .foregroundStyle(.primary)
                 }
+
+                // Test Section
+                Section {
+                    Button {
+                        Task {
+                            await LiveActivityManager.shared.startActivity(
+                                appDisplayName: "Instagram",
+                                appIdentifier: "test"
+                            )
+                        }
+                    } label: {
+                        Label {
+                            Text("Start Test Timer")
+                        } icon: {
+                            Image(systemName: "play.circle.fill")
+                                .foregroundStyle(.green)
+                        }
+                    }
+
+                    Button {
+                        Task {
+                            await LiveActivityManager.shared.endAllActivities()
+                        }
+                    } label: {
+                        Label {
+                            Text("Stop Timer")
+                        } icon: {
+                            Image(systemName: "stop.circle.fill")
+                                .foregroundStyle(.red)
+                        }
+                    }
+                } header: {
+                    Text("Test")
+                } footer: {
+                    Text("Use these buttons to test if the Dynamic Island timer works.")
+                }
             }
             .navigationTitle("Island Time")
             .navigationBarTitleDisplayMode(.large)
