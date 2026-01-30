@@ -41,10 +41,19 @@ targets:
     dependencies:
       - target: DeviceActivityMonitorExtension
         embed: true
+        codeSign: true
+        copyPhase:
+          destination: plugins
       - target: TimerActivityExtension
         embed: true
+        codeSign: true
+        copyPhase:
+          destination: plugins
       - target: ScreenTimeWidget
         embed: true
+        codeSign: true
+        copyPhase:
+          destination: plugins
 
   DeviceActivityMonitorExtension:
     type: app-extension
@@ -59,7 +68,7 @@ targets:
       - path: Shared/TimerCustomization.swift
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.DeviceActivityMonitorExtension
+        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.DeviceActivityMonitor
         INFOPLIST_FILE: DeviceActivityMonitorExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements
         SKIP_INSTALL: YES
@@ -81,7 +90,7 @@ targets:
       - path: Shared/TimerCustomization.swift
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.TimerActivityExtension
+        PRODUCT_BUNDLE_IDENTIFIER: com.alecrj.islandtime.TimerActivity
         INFOPLIST_FILE: TimerActivityExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: TimerActivityExtension/TimerActivityExtension.entitlements
         SKIP_INSTALL: YES

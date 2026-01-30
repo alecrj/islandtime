@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		007BCBA7120FC3C2265CD109 /* TimerActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */; };
 		096AE252AB19DBCF238DE1B3 /* TimerActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B195E7DC5DF84A5A446830DD /* TimerActivityLiveActivity.swift */; };
 		13677CB0026A1374A9566B32 /* DebugHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76A02DC8142C46F9BF98EE /* DebugHelpers.swift */; };
-		183B9B9D3CB5A727147BEE34 /* ScreenTimeWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		183B9B9D3CB5A727147BEE34 /* ScreenTimeWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D43A0526B9D76F982420A3D /* TimerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49A4F1401135D22C415E5C /* TimerCustomization.swift */; };
 		31E1C872FCB4DC9523DD4B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81556818BCC34694E9E2C841 /* Assets.xcassets */; };
 		359647D563021A732B93288F /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589067461EC07C8B8DFE475 /* AppGroupStorage.swift */; };
@@ -29,7 +29,7 @@
 		A1C4271723473F16D58E5C0C /* ScreenTimeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939F699C11773EBFD779E08 /* ScreenTimeWidget.swift */; };
 		A2004D677198465E2845088D /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A14D9921C0C6F8828CE7F /* OnboardingContainerView.swift */; };
 		A8B98811CCEF0A7E91A57D9A /* WidgetStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A077F4E0A15272855260B /* WidgetStorage.swift */; };
-		AC063193954F8B82A601989F /* TimerActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AC063193954F8B82A601989F /* TimerActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9C6AE7E30E4BD8C232916C0 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876E1F5D19E438495CCB20A /* DeviceActivityMonitorExtension.swift */; };
 		BB2C8A86CE7DFFED4CB008BE /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A668B3CEC15A17355454CD /* LiveActivityManager.swift */; };
 		C3D9ED11E24C1EF182C775D8 /* OnboardingAppPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C19558633630BBF3C33066 /* OnboardingAppPickerView.swift */; };
@@ -38,7 +38,7 @@
 		D53C22865D2F28DCCD1AB253 /* WidgetCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153FB915C1AD53901F5DDCF /* WidgetCenter+Extensions.swift */; };
 		E262CA99EC54F28D260C5AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F101BEEBA00FB0A70420010 /* Assets.xcassets */; };
 		F46A8F157FE177896026DF52 /* TimerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49A4F1401135D22C415E5C /* TimerCustomization.swift */; };
-		FB5FB65EE71EE2D2227892F8 /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB5FB65EE71EE2D2227892F8 /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,16 +88,16 @@
 		1F101BEEBA00FB0A70420010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A668B3CEC15A17355454CD /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		2939F699C11773EBFD779E08 /* ScreenTimeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeWidget.swift; sourceTree = "<group>"; };
-		312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimerActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		312AF94A219AC4237C79EB43 /* TimerActivityExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = TimerActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		54848E6C3731FF6AB337FA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		586437CEDB3F49EE1B3EE327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CAC83B6BAA51905218FF609 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		6876E1F5D19E438495CCB20A /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
-		6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenTimeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2B0201A6B6E6BB62F5B4C6 /* ScreenTimeWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ScreenTimeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AD917C7B1D8EE5DE9DF048 /* OnboardingPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPermissionView.swift; sourceTree = "<group>"; };
 		7C52556AACF5C929B092D6F8 /* TimerActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActivityAttributes.swift; sourceTree = "<group>"; };
 		81556818BCC34694E9E2C841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		821785841F1B9E700100AC53 /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		849E46CEA39BEE0D3E6E1C41 /* CustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
 		8CBF7652A1FF5EFB2BCECB1A /* DeviceActivityMonitorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitorExtension.entitlements; sourceTree = "<group>"; };
 		918A14D9921C0C6F8828CE7F /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		DA34567646B5C0647956477D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DB76A02DC8142C46F9BF98EE /* DebugHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugHelpers.swift; sourceTree = "<group>"; };
 		DFC26B5A5596D2C05D0DBE58 /* OnboardingPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPreviewView.swift; sourceTree = "<group>"; };
-		F131747A9F6BF0F446C46A40 /* IslandTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IslandTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F131747A9F6BF0F446C46A40 /* IslandTime.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = IslandTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EEF2A34D71C7158AC87565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FC49A4F1401135D22C415E5C /* TimerCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCustomization.swift; sourceTree = "<group>"; };
 		FD52D80011BB497B0C2CBAE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -330,6 +330,7 @@
 			);
 			mainGroup = FF8F7957630FB1CA630A56EA;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -513,14 +514,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TimerActivityExtension/TimerActivityExtension.entitlements;
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = TimerActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.TimerActivityExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.TimerActivity;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -534,7 +534,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ScreenTimeTimer/ScreenTimeTimer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = ScreenTimeTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,7 +607,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ScreenTimeWidget/ScreenTimeWidget.entitlements;
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = ScreenTimeWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,14 +624,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TimerActivityExtension/TimerActivityExtension.entitlements;
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = TimerActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.TimerActivityExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.TimerActivity;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -647,7 +644,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ScreenTimeTimer/ScreenTimeTimer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = ScreenTimeTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -663,7 +659,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ScreenTimeWidget/ScreenTimeWidget.entitlements;
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = ScreenTimeWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -681,14 +676,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.DeviceActivityMonitorExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.DeviceActivityMonitor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -699,14 +693,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
-				DEVELOPMENT_TEAM = 874DZM3NCG;
 				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.DeviceActivityMonitorExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alecrj.islandtime.DeviceActivityMonitor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
