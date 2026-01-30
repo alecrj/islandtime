@@ -38,6 +38,13 @@ targets:
         com.apple.developer.family-controls: true
         com.apple.security.application-groups:
           - group.com.alecrj.islandtime
+    dependencies:
+      - target: DeviceActivityMonitorExtension
+        embed: true
+      - target: TimerActivityExtension
+        embed: true
+      - target: ScreenTimeWidget
+        embed: true
 
   DeviceActivityMonitorExtension:
     type: app-extension
@@ -62,9 +69,6 @@ targets:
         com.apple.developer.family-controls: true
         com.apple.security.application-groups:
           - group.com.alecrj.islandtime
-    dependencies:
-      - target: IslandTime
-        embed: false
 
   TimerActivityExtension:
     type: app-extension
@@ -86,9 +90,6 @@ targets:
       properties:
         com.apple.security.application-groups:
           - group.com.alecrj.islandtime
-    dependencies:
-      - target: IslandTime
-        embed: false
 
   ScreenTimeWidget:
     type: app-extension
@@ -108,6 +109,3 @@ targets:
       properties:
         com.apple.security.application-groups:
           - group.com.alecrj.islandtime
-    dependencies:
-      - target: IslandTime
-        embed: false
