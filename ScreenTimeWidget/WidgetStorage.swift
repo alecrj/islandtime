@@ -12,7 +12,7 @@ import Foundation
 final class WidgetStorage {
     static let shared = WidgetStorage()
 
-    private let suiteName = "group.com.yourcompany.screentimetimer"
+    private let suiteName = "group.com.alecrj.islandtime"
     private let defaults: UserDefaults?
 
     private init() {

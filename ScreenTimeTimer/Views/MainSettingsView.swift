@@ -1,6 +1,6 @@
 //
 //  MainSettingsView.swift
-//  ScreenTimeTimer
+//  IslandTime
 //
 //  Main settings screen after onboarding.
 //
@@ -12,13 +12,14 @@ struct MainSettingsView: View {
     @EnvironmentObject var appState: AppState
     @State private var showAppPicker = false
     @State private var showPrivacyInfo = false
+    @State private var customization: TimerCustomization = .default
 
     var body: some View {
         NavigationStack {
             List {
                 // Status Section
                 Section {
-                    StatusCard()
+                    StatusCard(accentColor: customization.color.color)
                 } header: {
                     Text("Today")
                 }
@@ -33,9 +34,10 @@ struct MainSettingsView: View {
                             Text("Live Timer")
                         } icon: {
                             Image(systemName: "timer")
-                                .foregroundStyle(Color.accentColor)
+                                .foregroundStyle(customization.color.color)
                         }
                     }
+                    .tint(customization.color.color)
                 } header: {
                     Text("Timer")
                 } footer: {
@@ -50,7 +52,7 @@ struct MainSettingsView: View {
                                 Text("Tracked Apps")
                             } icon: {
                                 Image(systemName: "square.grid.2x2")
-                                    .foregroundStyle(Color.accentColor)
+                                    .foregroundStyle(customization.color.color)
                             }
 
                             Spacer()
@@ -65,10 +67,21 @@ struct MainSettingsView: View {
                         }
                     }
                     .foregroundStyle(.primary)
+
+                    NavigationLink {
+                        CustomizationView()
+                    } label: {
+                        Label {
+                            Text("Appearance")
+                        } icon: {
+                            Image(systemName: "paintpalette")
+                                .foregroundStyle(customization.color.color)
+                        }
+                    }
                 } header: {
                     Text("Apps")
                 } footer: {
-                    Text("Select which apps show a session timer in the Dynamic Island.")
+                    Text("Select which apps to track and customize the timer appearance.")
                 }
 
                 // Widget Info Section
@@ -104,13 +117,13 @@ struct MainSettingsView: View {
                             Text("Privacy")
                         } icon: {
                             Image(systemName: "hand.raised")
-                                .foregroundStyle(Color.accentColor)
+                                .foregroundStyle(customization.color.color)
                         }
                     }
                     .foregroundStyle(.primary)
                 }
             }
-            .navigationTitle("Screen Time Timer")
+            .navigationTitle("Island Time")
             .navigationBarTitleDisplayMode(.large)
             .familyActivityPicker(
                 isPresented: $showAppPicker,
@@ -124,6 +137,7 @@ struct MainSettingsView: View {
             }
             .onAppear {
                 appState.refreshTodayTotal()
+                customization = AppGroupStorage.shared.loadCustomization()
             }
         }
     }
@@ -132,6 +146,7 @@ struct MainSettingsView: View {
 // MARK: - Status Card
 struct StatusCard: View {
     @EnvironmentObject var appState: AppState
+    var accentColor: Color = .blue
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -143,6 +158,7 @@ struct StatusCard: View {
 
                     Text(formattedTime)
                         .font(.system(size: 34, weight: .bold, design: .rounded))
+                        .foregroundStyle(accentColor)
                 }
 
                 Spacer()

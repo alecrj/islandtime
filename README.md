@@ -1,12 +1,15 @@
-# Screen Time Timer
+# Island Time
 
 A minimal iOS app that shows a **Dynamic Island timer** while using selected apps, plus a **Lock Screen widget** showing daily screen time totals.
 
 ## Features
 
 - **Dynamic Island Timer**: Live Activity shows elapsed time when using tracked apps
+- **Customizable Colors**: 8 color options (blue, green, orange, purple, pink, red, cyan, mint)
+- **3 Display Styles**: Minimal, Detailed, or Compact layouts
 - **App Selection**: Choose which apps to track via Apple's FamilyActivityPicker
 - **Lock Screen Widget**: Shows total tracked screen time today
+- **Haptic Feedback**: Optional vibration when timer starts
 - **Privacy-First**: All data stays on device, no analytics, no ads
 
 ## Requirements

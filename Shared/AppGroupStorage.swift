@@ -11,7 +11,7 @@ import FamilyControls
 
 // MARK: - Constants
 public enum AppGroupConstants {
-    public static let suiteName = "group.com.yourcompany.screentimetimer"
+    public static let suiteName = "group.com.alecrj.islandtime"
 
     public enum Keys {
         public static let selectedApps = "selectedApps"

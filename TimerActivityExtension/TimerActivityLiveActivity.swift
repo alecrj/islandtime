@@ -3,7 +3,7 @@
 //  TimerActivityExtension
 //
 //  Live Activity UI for Dynamic Island and Lock Screen banner.
-//  Requires: TimerActivityAttributes.swift to be added to this target
+//  Requires: TimerActivityAttributes.swift, TimerCustomization.swift
 //
 
 import ActivityKit
@@ -14,34 +14,44 @@ struct TimerActivityLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: TimerActivityAttributes.self) { context in
             // Lock Screen / Banner UI
-            LockScreenBannerView(state: context.state)
-                .activityBackgroundTint(Color.black.opacity(0.9))
-                .activitySystemActionForegroundColor(Color.white)
+            LockScreenBannerView(
+                state: context.state,
+                style: context.attributes.timerStyle
+            )
+            .activityBackgroundTint(Color.black.opacity(0.9))
+            .activitySystemActionForegroundColor(Color.white)
 
         } dynamicIsland: { context in
+            let accentColor = context.state.timerColor.color
+            let style = context.attributes.timerStyle
+
             DynamicIsland {
                 // Expanded Region - Leading
                 DynamicIslandExpandedRegion(.leading) {
                     HStack(spacing: 8) {
                         ZStack {
                             Circle()
-                                .fill(Color.blue.opacity(0.2))
+                                .fill(accentColor.opacity(0.2))
                                 .frame(width: 36, height: 36)
 
                             Image(systemName: "app.fill")
                                 .font(.system(size: 16))
-                                .foregroundStyle(Color.blue)
+                                .foregroundStyle(accentColor)
                         }
 
-                        VStack(alignment: .leading, spacing: 1) {
-                            Text(context.state.appDisplayName)
-                                .font(.caption)
-                                .fontWeight(.medium)
-                                .lineLimit(1)
+                        if style != .minimal {
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(context.state.appDisplayName)
+                                    .font(.caption)
+                                    .fontWeight(.medium)
+                                    .lineLimit(1)
 
-                            Text("Session")
-                                .font(.caption2)
-                                .foregroundStyle(.secondary)
+                                if style == .detailed {
+                                    Text("Session")
+                                        .font(.caption2)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
                         }
                     }
                 }
@@ -50,13 +60,15 @@ struct TimerActivityLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.trailing) {
                     VStack(alignment: .trailing, spacing: 2) {
                         Text(context.state.sessionStartDate, style: .timer)
-                            .font(.system(size: 28, weight: .bold, design: .monospaced))
-                            .foregroundStyle(Color.blue)
+                            .font(.system(size: style == .compact ? 24 : 28, weight: .bold, design: .monospaced))
+                            .foregroundStyle(accentColor)
                             .monospacedDigit()
 
-                        Text("elapsed")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
+                        if style == .detailed {
+                            Text("elapsed")
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
 
@@ -67,41 +79,45 @@ struct TimerActivityLiveActivity: Widget {
 
                 // Expanded Region - Bottom
                 DynamicIslandExpandedRegion(.bottom) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "circle.fill")
-                            .font(.system(size: 6))
-                            .foregroundStyle(.green)
+                    if style == .detailed {
+                        HStack(spacing: 6) {
+                            Circle()
+                                .fill(accentColor)
+                                .frame(width: 6, height: 6)
 
-                        Text("Timer running")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            Text("Timer running")
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.top, 4)
                     }
-                    .padding(.top, 4)
                 }
 
             } compactLeading: {
                 // Compact Leading (left side of pill)
-                HStack(spacing: 4) {
-                    Image(systemName: "timer")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundStyle(Color.blue)
-                }
+                Image(systemName: "timer")
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(accentColor)
 
             } compactTrailing: {
                 // Compact Trailing (right side of pill)
                 Text(context.state.sessionStartDate, style: .timer)
                     .font(.system(size: 14, weight: .semibold, design: .monospaced))
-                    .foregroundStyle(Color.blue)
+                    .foregroundStyle(accentColor)
                     .monospacedDigit()
                     .frame(minWidth: 44)
 
             } minimal: {
                 // Minimal (smallest representation)
-                Image(systemName: "timer")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundStyle(Color.blue)
+                ZStack {
+                    Circle()
+                        .fill(accentColor.opacity(0.3))
+                    Image(systemName: "timer")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundStyle(accentColor)
+                }
             }
-            .keylineTint(Color.blue)
+            .keylineTint(accentColor)
         }
     }
 }
@@ -109,33 +125,43 @@ struct TimerActivityLiveActivity: Widget {
 // MARK: - Lock Screen Banner View
 struct LockScreenBannerView: View {
     let state: TimerActivityAttributes.ContentState
+    let style: TimerStyle
+
+    private var accentColor: Color {
+        state.timerColor.color
+    }
 
     var body: some View {
         HStack(spacing: 16) {
             // App icon
             ZStack {
                 Circle()
-                    .fill(Color.blue.opacity(0.2))
-                    .frame(width: 48, height: 48)
+                    .fill(accentColor.opacity(0.2))
+                    .frame(width: style == .compact ? 40 : 48, height: style == .compact ? 40 : 48)
 
                 Image(systemName: "app.fill")
-                    .font(.system(size: 22))
-                    .foregroundStyle(Color.blue)
+                    .font(.system(size: style == .compact ? 18 : 22))
+                    .foregroundStyle(accentColor)
             }
 
             // Info
-            VStack(alignment: .leading, spacing: 4) {
-                Text(state.appDisplayName)
-                    .font(.headline)
-                    .foregroundStyle(.white)
+            if style != .minimal {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(state.appDisplayName)
+                        .font(style == .compact ? .subheadline : .headline)
+                        .fontWeight(.medium)
+                        .foregroundStyle(.white)
 
-                HStack(spacing: 4) {
-                    Image(systemName: "circle.fill")
-                        .font(.system(size: 6))
-                        .foregroundStyle(.green)
-                    Text("Session active")
-                        .font(.caption)
-                        .foregroundStyle(.white.opacity(0.7))
+                    if style == .detailed {
+                        HStack(spacing: 4) {
+                            Circle()
+                                .fill(accentColor)
+                                .frame(width: 6, height: 6)
+                            Text("Session active")
+                                .font(.caption)
+                                .foregroundStyle(.white.opacity(0.7))
+                        }
+                    }
                 }
             }
 
@@ -144,25 +170,33 @@ struct LockScreenBannerView: View {
             // Timer
             VStack(alignment: .trailing, spacing: 2) {
                 Text(state.sessionStartDate, style: .timer)
-                    .font(.system(size: 32, weight: .bold, design: .monospaced))
-                    .foregroundStyle(Color.blue)
+                    .font(.system(size: style == .compact ? 28 : 32, weight: .bold, design: .monospaced))
+                    .foregroundStyle(accentColor)
                     .monospacedDigit()
 
-                Text("elapsed")
-                    .font(.caption2)
-                    .foregroundStyle(.white.opacity(0.5))
+                if style == .detailed {
+                    Text("elapsed")
+                        .font(.caption2)
+                        .foregroundStyle(.white.opacity(0.5))
+                }
             }
         }
         .padding(.horizontal, 20)
-        .padding(.vertical, 16)
+        .padding(.vertical, style == .compact ? 12 : 16)
     }
 }
 
 // MARK: - Previews
-#Preview("Lock Screen Banner", as: .content, using: TimerActivityAttributes.preview) {
+#Preview("Lock Screen Banner - Blue", as: .content, using: TimerActivityAttributes.preview) {
     TimerActivityLiveActivity()
 } contentStates: {
     TimerActivityAttributes.ContentState.preview
+}
+
+#Preview("Lock Screen Banner - Orange", as: .content, using: TimerActivityAttributes.preview) {
+    TimerActivityLiveActivity()
+} contentStates: {
+    TimerActivityAttributes.ContentState.previewOrange
 }
 
 #Preview("Dynamic Island Compact", as: .dynamicIsland(.compact), using: TimerActivityAttributes.preview) {

@@ -1,13 +1,14 @@
 //
 //  LiveActivityManager.swift
-//  ScreenTimeTimer
+//  IslandTime
 //
-//  Manages Live Activity lifecycle.
+//  Manages Live Activity lifecycle with customization support.
 //  This file must be added to: Main App, DeviceActivityMonitorExtension
 //
 
 import Foundation
 import ActivityKit
+import SwiftUI
 
 // MARK: - Live Activity Manager
 public final class LiveActivityManager {
@@ -33,10 +34,18 @@ public final class LiveActivityManager {
         // End any existing activities first
         await endAllActivities()
 
-        let attributes = TimerActivityAttributes(trackedAppIdentifier: appIdentifier)
+        // Load customization settings
+        let customization = AppGroupStorage.shared.loadCustomization()
+
+        let attributes = TimerActivityAttributes(
+            trackedAppIdentifier: appIdentifier,
+            timerStyle: customization.style
+        )
+
         let initialState = TimerActivityAttributes.ContentState(
             appDisplayName: appDisplayName,
-            sessionStartDate: Date()
+            sessionStartDate: Date(),
+            timerColor: customization.color
         )
 
         let content = ActivityContent(
@@ -50,7 +59,12 @@ public final class LiveActivityManager {
                 content: content,
                 pushType: nil
             )
-            print("[LiveActivityManager] Started activity: \(activity.id)")
+            print("[LiveActivityManager] Started activity: \(activity.id) with color: \(customization.color.rawValue)")
+
+            // Haptic feedback if enabled
+            if customization.hapticOnStart {
+                await triggerHaptic()
+            }
 
             // Save session info to shared storage
             AppGroupStorage.shared.saveActiveSession(
@@ -68,9 +82,12 @@ public final class LiveActivityManager {
     // MARK: - Update Activity
 
     public func updateActivity(appDisplayName: String, sessionStartDate: Date) async {
+        let customization = AppGroupStorage.shared.loadCustomization()
+
         let state = TimerActivityAttributes.ContentState(
             appDisplayName: appDisplayName,
-            sessionStartDate: sessionStartDate
+            sessionStartDate: sessionStartDate,
+            timerColor: customization.color
         )
         let content = ActivityContent(state: state, staleDate: nil)
 
@@ -132,5 +149,15 @@ public final class LiveActivityManager {
 
     public var currentActivityId: String? {
         Activity<TimerActivityAttributes>.activities.first?.id
+    }
+
+    // MARK: - Haptic Feedback
+
+    @MainActor
+    private func triggerHaptic() {
+        #if os(iOS)
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        #endif
     }
 }
