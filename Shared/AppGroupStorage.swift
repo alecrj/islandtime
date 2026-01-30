@@ -175,3 +175,31 @@ public final class AppGroupStorage {
 public extension Notification.Name {
     static let screenTimeUpdated = Notification.Name("screenTimeUpdated")
 }
+
+// MARK: - Timer Customization Storage
+extension AppGroupStorage {
+    private static let customizationKey = "timerCustomization"
+
+    public func saveCustomization(_ customization: TimerCustomization) {
+        do {
+            let data = try JSONEncoder().encode(customization)
+            defaults?.set(data, forKey: Self.customizationKey)
+            defaults?.synchronize()
+            print("[AppGroupStorage] Saved customization: \(customization)")
+        } catch {
+            print("[AppGroupStorage] Failed to save customization: \(error)")
+        }
+    }
+
+    public func loadCustomization() -> TimerCustomization {
+        guard let data = defaults?.data(forKey: Self.customizationKey) else {
+            return .default
+        }
+        do {
+            return try JSONDecoder().decode(TimerCustomization.self, from: data)
+        } catch {
+            print("[AppGroupStorage] Failed to load customization: \(error)")
+            return .default
+        }
+    }
+}

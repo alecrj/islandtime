@@ -95,31 +95,4 @@ public struct TimerCustomization: Codable, Equatable {
     public static let `default` = TimerCustomization()
 }
 
-// MARK: - Storage Extension
-extension AppGroupStorage {
-    private static let customizationKey = "timerCustomization"
-
-    public func saveCustomization(_ customization: TimerCustomization) {
-        do {
-            let data = try JSONEncoder().encode(customization)
-            UserDefaults(suiteName: AppGroupConstants.suiteName)?.set(data, forKey: Self.customizationKey)
-            UserDefaults(suiteName: AppGroupConstants.suiteName)?.synchronize()
-            print("[AppGroupStorage] Saved customization: \(customization)")
-        } catch {
-            print("[AppGroupStorage] Failed to save customization: \(error)")
-        }
-    }
-
-    public func loadCustomization() -> TimerCustomization {
-        guard let data = UserDefaults(suiteName: AppGroupConstants.suiteName)?.data(forKey: Self.customizationKey) else {
-            return .default
-        }
-        do {
-            return try JSONDecoder().decode(TimerCustomization.self, from: data)
-        } catch {
-            print("[AppGroupStorage] Failed to load customization: \(error)")
-            return .default
-        }
-    }
-}
 
