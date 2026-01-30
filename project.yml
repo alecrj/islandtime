@@ -64,18 +64,12 @@ targets:
       - target: DeviceActivityMonitorExtension
         embed: true
         codeSign: true
-        copyPhase:
-          destination: plugins
       - target: TimerActivityExtension
         embed: true
         codeSign: true
-        copyPhase:
-          destination: plugins
       - target: ScreenTimeWidget
         embed: true
         codeSign: true
-        copyPhase:
-          destination: plugins
 
   DeviceActivityMonitorExtension:
     type: app-extension
