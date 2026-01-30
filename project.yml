@@ -5,6 +5,26 @@ options:
     iOS: "17.0"
   xcodeVersion: "15.0"
   generateEmptyDirectories: true
+  createIntermediateGroups: true
+
+schemes:
+  IslandTime:
+    build:
+      targets:
+        IslandTime: all
+        DeviceActivityMonitorExtension: all
+        TimerActivityExtension: all
+        ScreenTimeWidget: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
 
 settings:
   base:
