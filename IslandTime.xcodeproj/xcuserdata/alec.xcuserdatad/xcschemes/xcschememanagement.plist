@@ -7,22 +7,45 @@
 		<key>DeviceActivityMonitorExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>IslandTime.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>ScreenTimeWidget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>TimerActivityExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B113261CD16B90C3956E1B03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B20DA7217AC82FDBCB5CC368</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2B99AF9171B57DE8E1654F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBB0638DF168C6F9D325029C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
