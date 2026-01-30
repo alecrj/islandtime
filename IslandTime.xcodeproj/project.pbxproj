@@ -319,6 +319,24 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B113261CD16B90C3956E1B03 = {
+						DevelopmentTeam = 874DZM3NCG;
+						ProvisioningStyle = Automatic;
+					};
+					B20DA7217AC82FDBCB5CC368 = {
+						DevelopmentTeam = 874DZM3NCG;
+						ProvisioningStyle = Automatic;
+					};
+					B2B99AF9171B57DE8E1654F7 = {
+						DevelopmentTeam = 874DZM3NCG;
+						ProvisioningStyle = Automatic;
+					};
+					FBB0638DF168C6F9D325029C = {
+						DevelopmentTeam = 874DZM3NCG;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = EDD719621188C2C0BB793924 /* Build configuration list for PBXProject "IslandTime" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -478,9 +496,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 874DZM3NCG;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -578,9 +598,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 874DZM3NCG;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
