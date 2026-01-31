@@ -13,6 +13,8 @@ struct MainSettingsView: View {
     @State private var showAppPicker = false
     @State private var showPrivacyInfo = false
     @State private var customization: TimerCustomization = .default
+    @State private var testTimerStatus: String = ""
+    @State private var showTestAlert = false
 
     var body: some View {
         NavigationStack {
@@ -127,10 +129,24 @@ struct MainSettingsView: View {
                 Section {
                     Button {
                         Task {
-                            await LiveActivityManager.shared.startActivity(
+                            let enabled = LiveActivityManager.shared.areActivitiesEnabled
+                            if !enabled {
+                                testTimerStatus = "Live Activities are DISABLED. Go to Settings → IslandTime → Live Activities and enable them."
+                                showTestAlert = true
+                                return
+                            }
+
+                            let activityId = await LiveActivityManager.shared.startActivity(
                                 appDisplayName: "Instagram",
                                 appIdentifier: "test"
                             )
+
+                            if let id = activityId {
+                                testTimerStatus = "Timer started! Activity ID: \(id). Check your Dynamic Island."
+                            } else {
+                                testTimerStatus = "Failed to start timer. Check console for errors."
+                            }
+                            showTestAlert = true
                         }
                     } label: {
                         Label {
@@ -170,6 +186,11 @@ struct MainSettingsView: View {
             )
             .sheet(isPresented: $showPrivacyInfo) {
                 PrivacyInfoView()
+            }
+            .alert("Test Timer", isPresented: $showTestAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(testTimerStatus)
             }
             .onAppear {
                 appState.refreshTodayTotal()
